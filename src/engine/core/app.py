@@ -2,6 +2,7 @@ from engine.options import Options
 from .input_manager import InputManager
 from .renderer import Renderer
 from .context import Context
+from .version import startup_string
 import pygame as pg 
 from sys import exit
 
@@ -22,6 +23,8 @@ class App:
     screen:pg.Surface
     
     def __init__(self, title:str, width:int, height:int, options:Options = None):
+        print(startup_string)
+        
         if not options:
             self.options = Options.get_from_args()
         else:
