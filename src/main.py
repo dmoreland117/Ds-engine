@@ -1,4 +1,4 @@
-from engine import App, pg, Text, DColor
+from engine import App, pg, Text, DColor, Sprite
 from tile_mode_menu import TileModeMenu
 
 class Editor(App):
@@ -9,7 +9,16 @@ class Editor(App):
        
         self.context.renderer.set_clear_color(bg)
        
+        self.context.recources.load_recource('src/assets/Heimlich.png')
+       
+        texture = self.context.recources.get_recource_by_id(0)
+       
+        test_sprite = Sprite(self.context)
+        test_sprite.set_texture(texture)
+        test_sprite.set_position(50, 50)
+       
         self.context.scenes.add_scene(TileModeMenu(self.context), 'tile_modes')
+        self.context.scenes.add_scene(test_sprite, 'test_spr')
         print(self.context.scenes.get_scenes())
 
 
