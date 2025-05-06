@@ -6,4 +6,5 @@ from .context import Context
 from .renderer import Renderer
 from .recource_manager import RecourceManager
 from .recource import Recource
+from .version import startup_string as version_string
 import pygame as pg
