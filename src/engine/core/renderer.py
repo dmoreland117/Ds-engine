@@ -2,6 +2,7 @@ import pygame as pg
 
 class Renderer:
     clear_color:pg.Color = (0, 0, 200)
+    screen:pg.Surface
     
     def __init__(self, screen):
         self.screen = screen
