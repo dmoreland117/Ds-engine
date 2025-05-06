@@ -7,9 +7,9 @@ class Player(Positioned):
         super().__init__(context)
         
     def _initailized(self):
-        loaded = self.get_context().recources.load_recource('src/assets/Heimlich.png')
+        loaded = self.get_context().resources.load_resource('src/assets/Heimlich.png')
         if loaded:
-            self.texture = self.get_context().recources.get_recource_by_id(0)
+            self.texture = self.get_context().resources.get_resource_by_id(0)
         
             self.sprite = Sprite(self.context)
             self.sprite.set_texture(self.texture)

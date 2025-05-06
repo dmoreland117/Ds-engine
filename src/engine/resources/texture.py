@@ -1,7 +1,7 @@
-from ..core.recource import Recource
+from ..core.resource import Resource
 import pygame as pg
 
-class Texture(Recource):
+class Texture(Resource):
     surface:pg.Surface
     
     def __init__(self):
@@ -17,6 +17,9 @@ class Texture(Recource):
         texture.surface = pg.image.load(path)
         
         return texture
+    
+    def _unload(self):
+        self.surface = None
         
     def get_surface(self) -> pg.Surface:
         return self.surface

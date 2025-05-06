@@ -5,4 +5,4 @@ class Context:
     input:'InputManager'
     scenes:'SceneManager'
     renderer:'Renderer'
-    recources:'RecourceManager'
+    resources:'ResourceManager'

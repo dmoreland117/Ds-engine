@@ -1,5 +1,5 @@
 
-class Recource:
+class Resource:
     id:int = 0
     name:str = ''
     path:str = ''
@@ -23,10 +23,16 @@ class Recource:
         
         return False
     
-    def load(self, path:str) -> 'Recource':
+    def load(self, path:str) -> 'Resource':
         return self._load(path)
     
-    def _load(self, path:str) -> 'Recource':
+    def _load(self, path:str) -> 'Resource':
+        pass
+    
+    def unload(self):
+        self._unload()
+    
+    def _unload(self,):
         pass
     
     def get_name(self) -> str:

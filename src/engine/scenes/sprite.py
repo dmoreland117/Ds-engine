@@ -1,5 +1,5 @@
 from .positioned import Positioned
-from ..recources.texture import Texture
+from ..resources.texture import Texture
 
 class Sprite(Positioned):
     texture:Texture

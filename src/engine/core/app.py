@@ -1,7 +1,7 @@
 from engine.options import Options
 from .input_manager import InputManager
 from .renderer import Renderer
-from .recource_manager import RecourceManager
+from .resource_manager import ResourceManager
 from .context import Context
 from .version import startup_string
 import pygame as pg 
@@ -49,7 +49,7 @@ class App:
         self.context.scenes = SceneManager(self.context)
         self.context.input = InputManager()
         self.context.renderer = Renderer(self.screen)
-        self.context.recources = RecourceManager()
+        self.context.resources = ResourceManager()
     
     def input(self, dt:float) -> None:
         self.context.input.update()
